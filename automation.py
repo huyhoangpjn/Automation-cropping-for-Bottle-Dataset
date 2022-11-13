@@ -13,8 +13,11 @@ def automation(path, epsillon):
     for file in dir_list:
         os.chdir(path)
         if '.txt' in file:
+            print(file)
             with open(file, 'r') as f:
-                content = f.read().split(" ")
+                #Pick 1 obj/img
+                lines = f.readlines()
+                content = lines[0].split(" ")
                 index = content[0]
                 f.close()
             file = file.split('.')
@@ -52,3 +55,4 @@ def automation(path, epsillon):
             cv2.imwrite(name_img, img)
 
         
+automation('D:\\etude_en_france\\Garbageproject\\dataset\\archive\\Images_of_Waste\\YOLO_imgs', 0)
