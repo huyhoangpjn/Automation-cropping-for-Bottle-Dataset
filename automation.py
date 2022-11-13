@@ -1,7 +1,5 @@
 import os 
 import cv2
-import numpy as np
-from matplotlib import pyplot as plt
 
 def automation(path, epsillon):
     dir_list = os.listdir(path)

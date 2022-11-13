@@ -1,4 +1,5 @@
 from automation import automation
+from PyQt6 import QtGui
 from PyQt6.QtWidgets import *
 import sys
 
@@ -51,6 +52,7 @@ class App_run:
                 self.automation(self._view.path, 0)
             else:
                 self.automation(self._view.path, int(self._view.epsillon.text()))
+            print("OK")
         except:
             pass
 
@@ -67,6 +69,7 @@ class App_run:
 
 if __name__ == "__main__":
     app = QApplication([])
+    app.setWindowIcon(QtGui.QIcon('icon.ico'))
     window = Window()
     app_run = App_run(window,automation)
     window.show()
